@@ -1,14 +1,17 @@
-function calculateBMI() {
+function displayBMI() {
+  const firstNameInput = document.getElementById("firstName");
+  const heightInput = document.getElementById("height");
+  const weightInput = document.getElementById("weight");
+  const result = document.getElementById("result");
 
-  firstName = prompt("What is your first name?")
-  weight = prompt("What is your weight? (kg)")
-  height = prompt("What is your height? (metres)")
-  bmi = weight / height ** 2
-  console.log(firstName)
-  console.log(weight)
-  console.log(height)
-  alert(firstName + ', your bmi is ' + bmi + '!')
+  const firstName = firstNameInput.value;
+  const height = heightInput.value;
+  const weight = weightInput.value;
 
+  const bmi = weight / height ** 2;
+  console.log(firstName);
+  console.log(weight);
+  console.log(height);
+
+  result.innerHTML = `${firstName}, your BMI is ${bmi.toFixed(2)}!`;
 }
-
-
